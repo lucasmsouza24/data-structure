@@ -18,8 +18,19 @@ public class AlunoFundamental extends Aluno {
 
     @Override
     public Double calculaMedia() {
-        Double sum = nota1 + nota2 + nota3 + nota4;
-        return sum / 4;
+        return (nota1 + nota2 + nota3 + nota4) / 4;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder(super.toString());  
+        sb.append(" * nota 1: %.2f\n");
+        sb.append(" * nota 2: %.2f\n");
+        sb.append(" * nota 3: %.2f\n");
+        sb.append(" * nota 4: %.2f\n");
+
+        String str = String.valueOf(sb).replace("Aluno", "AlunoFundamental");
+        return String.format(str, nota1, nota2, nota3, nota4);
     }
 
     // Getters and Setters
@@ -46,10 +57,5 @@ public class AlunoFundamental extends Aluno {
     }
     public void setNota4(Double nota4) {
         this.nota4 = nota4;
-    }
-    
-    @Override
-    public String toString() {
-        return super.toString().replace("Aluno", "AlunoFundamental");
     }
 }

@@ -14,6 +14,18 @@ public abstract class Aluno {
     // methods
     public abstract Double calculaMedia();
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("-".repeat(20) + "\n");
+        sb.append("Aluno\n");
+        sb.append("-".repeat(20) + "\n");
+        sb.append("ra: %s\n");
+        sb.append("nome: %s\n");
+        sb.append("nota: %s\n");
+        String str = String.valueOf(sb);
+        return String.format(str, ra, nome, calculaMedia());
+    }
+
     // Getters and setters
     public Integer getRa() {
         return ra;
@@ -26,12 +38,6 @@ public abstract class Aluno {
     }
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    @Override
-    public String toString() {
-        String txt = "Aluno [ra=%s, nome=%s, nota=%s]";
-        return String.format(txt, ra, nome, calculaMedia());
     }
     
 }
