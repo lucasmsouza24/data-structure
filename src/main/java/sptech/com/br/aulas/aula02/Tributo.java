@@ -33,5 +33,4 @@ public class Tributo {
             System.out.println(t);
         }
     }
-
 }
