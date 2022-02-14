@@ -17,7 +17,7 @@ public abstract class Produto implements Tributavel {
     // methods
     @Override
     public String toString() {
-        return "Produto [codigo=" + codigo + ", descricao=" + descricao + ", preco=" + preco + "]";
+        return "Produto [codigo=" + codigo + ", descricao=" + descricao + ", preco=" + preco + ", tributo=" + this.getValorTributo() + "]";
     }
 
     // getters and setters

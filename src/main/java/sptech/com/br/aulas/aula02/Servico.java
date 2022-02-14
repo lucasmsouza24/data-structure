@@ -14,7 +14,12 @@ public class Servico implements Tributavel {
     
     // methods
     public Double getValorTributo() {
-        return null;
+        return this.getPreco() * 0.12;
+    }
+
+    @Override
+    public String toString() {
+        return "Servico [descricao=" + descricao + ", preco=" + preco + ", tributo=" + this.getValorTributo() + "]";
     }
 
     // getters and setters

@@ -13,7 +13,7 @@ public class Perfume extends Produto{
 
     // methods
     public Double getValorTributo() {
-        return null;
+        return this.getPreco() * 0.27;
     }
 
     // getters and setters

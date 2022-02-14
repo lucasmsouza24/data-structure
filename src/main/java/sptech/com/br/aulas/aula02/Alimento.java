@@ -13,7 +13,7 @@ public class Alimento extends Produto {
 
     // methods
     public Double getValorTributo() {
-        return null;
+        return this.getPreco() * 0.15;
     }
 
     // getters and setters

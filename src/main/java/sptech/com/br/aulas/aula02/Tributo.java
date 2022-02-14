@@ -28,4 +28,10 @@ public class Tributo {
         return total;
     }
 
+    public void exibirTodos() {
+        for (Tributavel t : tributos) {
+            System.out.println(t);
+        }
+    }
+
 }
