@@ -26,6 +26,6 @@ public class App {
         e.exibeAprovados();
 
         // searching element by ra
-        e.buscaAluno(12);
+        e.buscaAluno(23);
     }
 }

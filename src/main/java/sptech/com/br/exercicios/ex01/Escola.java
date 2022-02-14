@@ -42,23 +42,20 @@ public class Escola {
     }
 
     public void buscaAluno(Integer ra) {
-        Boolean exists = false; 
-
+        
         // itering through Aluno list
         for (Aluno a : alunos) {
             if (a.getRa().equals(ra)) {
-                exists = true;
                 System.out.println(a);
-                break;
+                return;
             }
         }
 
         // student not found
-        if (!exists) {
-            System.out.println("=".repeat(40));
-            System.out.println("Aluno não encontrado!");
-            System.out.println("=".repeat(40));
-        }
+        System.out.println("=".repeat(40));
+        System.out.println("Aluno não encontrado!");
+        System.out.println("=".repeat(40));
+        
     }
 
     // getters and setters
