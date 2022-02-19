@@ -24,8 +24,15 @@ public class Servico implements Vendavel {
 
     @Override
     public String toString() {
-        return "Servico [codigo=" + codigo + ", descricao=" + descricao + ", qtdHoras=" + qtdHoras + ", valorHoras="
-                + valorHoras + "]";
+        StringBuilder sb = new StringBuilder(Servico.class.getSimpleName());
+
+        sb.append("\n\tdescricao: " + descricao);
+        sb.append("\n\tcodigo: " + codigo);
+        sb.append("\n\tqtdHoras: " + qtdHoras);
+        sb.append("\n\tvalorHoras: " + valorHoras);
+        sb.append("\n\tvalorVenda: " + this.getValorVenda());
+        
+        return String.valueOf(sb);
     }
 
     // getters and setters

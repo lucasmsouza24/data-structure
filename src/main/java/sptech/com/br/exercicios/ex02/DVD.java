@@ -15,6 +15,15 @@ public class DVD extends Produto {
         return null;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder(super.toString());
+
+        sb.append("\n\tgravadora: " + gravadora);
+
+        return String.valueOf(sb).replace("Produto", DVD.class.getSimpleName());
+    }
+
     // getters and setters
     public String getGravadora() {
         return gravadora;

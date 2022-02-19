@@ -2,13 +2,13 @@ package sptech.com.br.exercicios.ex02;
 
 public class Livro extends Produto  {
     // attributes
-    private String autor;
+    private String author;
     private String isbn;
 
     // constructor
-    public Livro(Integer codigo, String nome, Double precoCusto, String autor, String isbn) {
+    public Livro(Integer codigo, String nome, Double precoCusto, String author, String isbn) {
         super(codigo, nome, precoCusto);
-        this.autor = autor;
+        this.author = author;
         this.isbn = isbn;
     }
 
@@ -16,12 +16,22 @@ public class Livro extends Produto  {
         return null;
     }
 
-    // getters and setters
-    public String getAutor() {
-        return autor;
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder(super.toString());
+
+        sb.append("\n\tautor: " + author);
+        sb.append("\n\tisbn: " + isbn);
+
+        return String.valueOf(sb).replace("Produto", Livro.class.getSimpleName());
     }
-    public void setAutor(String autor) {
-        this.autor = autor;
+
+    // getters and setters
+    public String getAuthor() {
+        return author;
+    }
+    public void setAuthor(String author) {
+        this.author = author;
     }
     public String getIsbn() {
         return isbn;

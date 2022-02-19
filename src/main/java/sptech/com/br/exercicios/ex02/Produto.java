@@ -16,7 +16,14 @@ public abstract class Produto implements Vendavel {
     // methods
     @Override
     public String toString() {
-        return "Produto [codigo=" + codigo + ", nome=" + nome + ", precoCusto=" + precoCusto + "]";
+        StringBuilder sb = new StringBuilder(Produto.class.getSimpleName());
+
+        sb.append("\n\tcodigo: " + codigo);
+        sb.append("\n\tnome: " + nome);
+        sb.append("\n\tprecoCusto: " + precoCusto);
+        sb.append("\n\tvalor venda: " + getValorVenda());
+
+        return String.valueOf(sb);
     }
 
     // getters and setters
