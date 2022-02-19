@@ -32,4 +32,8 @@ public class Carrinho {
             System.out.println(v);
         }
     }
+
+    public Integer amountItens() {
+        return carrinho.size();
+    }
 }

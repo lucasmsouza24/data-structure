@@ -18,6 +18,7 @@ public class Menu {
     }
 
     public void showItems() {
+        System.out.println("");
         for(int i = 0; i < items.size(); i++) {
             System.out.printf("[%d] %s\n", i + 1, items.get(i));
         }

@@ -40,10 +40,16 @@ public class App {
                     System.out.println(title("Venda realizada"));
                     break;
                 case "4":
-                    System.out.println("Exibindo itens do carrinho");
+                    System.out.println(title("Exibindo itens do carrinho"));
+
+                    System.out.println(String.format("\nQuantidade de itens: %d\n", bag.amountItens()));
+
+                    bag.exibeItensCarrinho();
                     break;
                 case "5":
-                    System.out.println("Exibindo total de venda");
+                    System.out.println(title("Exibindo total de venda"));
+                    String str = String.format("\nTotal venda: R$ %.2f", bag.calculaTotalVenda());
+                    System.out.println(str);
                     break;
                 case "6":
                     System.out.println(title("Saindo..."));
@@ -56,10 +62,9 @@ public class App {
         } while(!answer.equals("6"));
 
         sc.close();
-        bag.exibeItensCarrinho();
     }
 
     public static String title(String text) {
-        return String.format("%s\n %s \n%s", "=".repeat(40), text, "=".repeat(40));
+        return String.format("\n%s\n %s \n%s", "=".repeat(35), text, "=".repeat(35));
     }
 }
