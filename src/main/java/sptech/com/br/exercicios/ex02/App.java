@@ -27,12 +27,17 @@ public class App {
                 case "1":
                     // creating and adding book to bag
                     bag.adicionarVenda(VendavelCreator.createLivro());
+                    System.out.println(title("Venda realizada"));
                     break;
                 case "2":
+                    // creating and adding DVD to bag
                     bag.adicionarVenda(VendavelCreator.createDVD());
+                    System.out.println(title("Venda realizada"));
                     break;
                 case "3":
-                    System.out.println("Servico");
+                    // creating and adding service to bag
+                    bag.adicionarVenda(VendavelCreator.createServico());
+                    System.out.println(title("Venda realizada"));
                     break;
                 case "4":
                     System.out.println("Exibindo itens do carrinho");

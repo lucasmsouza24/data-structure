@@ -9,7 +9,7 @@ public class Servico implements Vendavel {
     private Integer valorHoras;
 
     // constructor
-    public Servico(String descricao, Integer codigo, Integer qtdHoras, Integer valorHoras) {
+    public Servico(Integer codigo, String descricao, Integer qtdHoras, Integer valorHoras) {
         this.descricao = descricao;
         this.codigo = codigo;
         this.qtdHoras = qtdHoras;
@@ -28,9 +28,9 @@ public class Servico implements Vendavel {
 
         sb.append("\n\tdescricao: " + descricao);
         sb.append("\n\tcodigo: " + codigo);
-        sb.append("\n\tqtdHoras: " + qtdHoras);
-        sb.append("\n\tvalorHoras: " + valorHoras);
-        sb.append("\n\tvalorVenda: " + this.getValorVenda());
+        sb.append("\n\tqtd horas: " + qtdHoras);
+        sb.append("\n\tvalor horas: " + valorHoras);
+        sb.append("\n\tvalor venda: " + this.getValorVenda());
         
         return String.valueOf(sb);
     }

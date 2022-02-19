@@ -67,6 +67,25 @@ public class VendavelCreator {
 
     // Servico building
     public static Servico createServico() {
-        return null;
+
+        System.out.println(App.title("Adicionando Serviço"));
+
+        // cod
+        System.out.println("\ncódigo: ");
+        Integer cod = scNum.nextInt();
+
+        // description
+        System.out.println("\ndescrição: ");
+        String desc = scStr.nextLine();
+
+        // hours total
+        System.out.println("\ntotal horas: ");
+        Integer hoursTotal = scNum.nextInt();
+
+        // hours price
+        System.out.println("\nvalor/hora: ");
+        Integer hoursPrice = scNum.nextInt();
+
+        return new Servico(cod, desc, hoursTotal, hoursPrice);
     }
 }
