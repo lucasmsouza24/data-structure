@@ -8,13 +8,16 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
+        // creating menus
         List<String> m1 = new ArrayList<>(Arrays.asList("Adicionar livro", "Adicionar DVD", "Adicionar Servico", "Exibir itens do carrinho", "Exibir total de venda", "Fim"));
         Menu menu = new Menu(m1);
 
-        Scanner sc = new Scanner(System.in);
+        // creating bag
+        Carrinho bag = new Carrinho();
 
-        // answer 
-        String answer = "0";
+        // input prepear
+        Scanner sc = new Scanner(System.in);
+        String answer;
 
         do {
             menu.showItems();
@@ -22,29 +25,36 @@ public class App {
 
             switch (answer) {
                 case "1":
-                    System.out.println("Codigo: ");
-                    String codStr = sc.nextLine();
-                    Integer cod = Integer.valueOf(codStr);
+                    Livro livro = VendavelCreator.createLivro();
+                    bag.adicionarVenda(livro);
                     break;
                 case "2":
-                    System.out.println("Caso 2");
+                    System.out.println("DVD");
                     break;
                 case "3":
-                    System.out.println("Caso 3");
+                    System.out.println("Servico");
                     break;
                 case "4":
-                    System.out.println("Caso 4");
+                    System.out.println("Exibindo itens do carrinho");
                     break;
                 case "5":
-                    System.out.println("Caso 5");
+                    System.out.println("Exibindo total de venda");
+                    break;
+                case "6":
+                    System.out.println(title("Saindo..."));
                     break;
                 default:
+                    System.out.println(title("Opção inválida, tente novamente!"));
                     break;
             }
 
         } while(!answer.equals("6"));
 
         sc.close();
+        bag.exibeItensCarrinho();
     }
 
+    public static String title(String text) {
+        return String.format("%s\n %s \n%s", "=".repeat(40), text, "=".repeat(40));
+    }
 }
