@@ -38,14 +38,34 @@ public class VendavelCreator {
 
         System.out.println("");
 
-        // creating and adding book to bag
         return new Livro(cod, title, price, author, isbn);
     }
 
+    // DVD Building
     public static DVD createDVD() {
-        return null;
+
+        System.out.println(App.title("Adicionando DVD"));
+
+        // cod
+        System.out.println("\ncódigo: ");
+        Integer cod = scNum.nextInt();
+
+        // name
+        System.out.println("\nnome: ");
+        String name = scStr.nextLine();
+
+        // price
+        System.out.println("\npreço: ");
+        Double price = scNum.nextDouble();
+
+        // recorder
+        System.out.println("\ngravadora: ");
+        String recorder = scStr.nextLine();
+
+        return new DVD(cod, name, price, recorder);
     }
 
+    // Servico building
     public static Servico createServico() {
         return null;
     }

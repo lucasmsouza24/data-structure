@@ -15,7 +15,7 @@ public class App {
         // creating bag
         Carrinho bag = new Carrinho();
 
-        // input prepear
+        // menu decision
         Scanner sc = new Scanner(System.in);
         String answer;
 
@@ -25,11 +25,11 @@ public class App {
 
             switch (answer) {
                 case "1":
-                    Livro livro = VendavelCreator.createLivro();
-                    bag.adicionarVenda(livro);
+                    // creating and adding book to bag
+                    bag.adicionarVenda(VendavelCreator.createLivro());
                     break;
                 case "2":
-                    System.out.println("DVD");
+                    bag.adicionarVenda(VendavelCreator.createDVD());
                     break;
                 case "3":
                     System.out.println("Servico");
