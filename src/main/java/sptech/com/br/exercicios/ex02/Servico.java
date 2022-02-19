@@ -6,10 +6,10 @@ public class Servico implements Vendavel {
     private String descricao; 
     private Integer codigo;
     private Integer qtdHoras;
-    private Integer valorHoras;
+    private Double valorHoras;
 
     // constructor
-    public Servico(Integer codigo, String descricao, Integer qtdHoras, Integer valorHoras) {
+    public Servico(Integer codigo, String descricao, Integer qtdHoras, Double valorHoras) {
         this.descricao = descricao;
         this.codigo = codigo;
         this.qtdHoras = qtdHoras;
@@ -19,7 +19,7 @@ public class Servico implements Vendavel {
     // methods
     @Override
     public Double getValorVenda() {
-        return null;
+        return this.qtdHoras * this.valorHoras;
     }
 
     @Override
@@ -30,7 +30,7 @@ public class Servico implements Vendavel {
         sb.append("\n\tcodigo: " + codigo);
         sb.append("\n\tqtd horas: " + qtdHoras);
         sb.append("\n\tvalor horas: " + valorHoras);
-        sb.append("\n\tvalor venda: " + this.getValorVenda());
+        sb.append(String.format("\n\tvalor venda: R$ %.2f", this.getValorVenda()));
         
         return String.valueOf(sb);
     }
@@ -54,10 +54,10 @@ public class Servico implements Vendavel {
     public void setQtdHoras(Integer qtdHoras) {
         this.qtdHoras = qtdHoras;
     }
-    public Integer getValorHoras() {
+    public Double getValorHoras() {
         return valorHoras;
     }
-    public void setValorHoras(Integer valorHoras) {
+    public void setValorHoras(Double valorHoras) {
         this.valorHoras = valorHoras;
     }
 }

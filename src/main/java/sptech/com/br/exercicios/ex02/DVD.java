@@ -12,7 +12,7 @@ public class DVD extends Produto {
     }
 
     public Double getValorVenda() {
-        return null;
+        return getPrecoCusto() * 1.2;
     }
 
     @Override

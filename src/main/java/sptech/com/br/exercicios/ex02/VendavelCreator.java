@@ -84,7 +84,7 @@ public class VendavelCreator {
 
         // hours price
         System.out.println("\nvalor/hora: ");
-        Integer hoursPrice = scNum.nextInt();
+        Double hoursPrice = scNum.nextDouble();
 
         return new Servico(cod, desc, hoursTotal, hoursPrice);
     }

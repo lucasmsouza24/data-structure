@@ -20,8 +20,8 @@ public abstract class Produto implements Vendavel {
 
         sb.append("\n\tcodigo: " + codigo);
         sb.append("\n\tnome: " + nome);
-        sb.append("\n\tpreco custo: " + precoCusto);
-        sb.append("\n\tvalor venda: " + getValorVenda());
+        sb.append(String.format("\n\tpreco custo: R$ %.2f", precoCusto));
+        sb.append(String.format("\n\tvalor venda: R$ %.2f", getValorVenda()));
 
         return String.valueOf(sb);
     }
