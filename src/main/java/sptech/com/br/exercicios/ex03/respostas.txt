@@ -1,0 +1,17 @@
+1) Se quisermos obrigar que a classe que representa o Professor e a classe que representa o
+Coordenador implementem o método: getValorBonus(), qual seria a melhor forma: classe
+abstrata ou interface? Justifique.
+
+    O tal bonus é aplicável somente às classes professor e coordenador, e não à todos os funcionários.
+    Portanto, nesse caso, a herança não é o melhor caminho para determinar um comportamento em comum. 
+
+2) Implemente também a classe ControleBonus, que terá como atributo um ou mais List para
+conter todos os objetos que recebem bônus. Pergunta: é necessário ter 2 List ou apenas um?
+
+    Contanto que a lista receba a interface em comum entre as classes, não são necessárias 2 listas diferentes.
+
+3) O polimorfismo está presente nesse sistema? Justifique.
+
+    Sim. polimorfismo é a capacidade do sistema tratar dois objetos de classes diferentes da mesma forma 
+    a partir de algum comportamento em comum. É exatamente o que acontece entre as classes Professor e Coordenador.
+    A classe ControleBonus não se importa com as especifidades das outras classes, contanto que as mesmas implementem IBonus.
