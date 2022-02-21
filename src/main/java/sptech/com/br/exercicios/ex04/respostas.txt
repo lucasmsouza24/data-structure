@@ -1,0 +1,10 @@
+Se quisermos obrigar que a classe que representa o Professor e a classe que representa o
+Coordenador implementem o método: getValorBonus(), qual seria a melhor forma: classe
+abstrata ou interface? Justifique
+
+    Uma vez que as classes Professor e Coordenador têm uma relação de herança, a melhor forma de garantir a implementação do método getValorBonus() é a partir da herança em comum entre as classes.
+
+O polimorfismo está presente nesse sistema? Justifique.
+
+    Sim. O método getValorBonus() é implementado de formas diferentes em cada classe.
+
