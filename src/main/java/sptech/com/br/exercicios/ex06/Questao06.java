@@ -9,28 +9,19 @@ public class Questao06 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Digite um dia: ");
-        int dia = sc.nextInt();
-
-        System.out.println("Digite um mês: ");
-        int mes = sc.nextInt();
-
+        System.out.println("Digite uma data (1/12): ");
+        String dataStr = sc.nextLine();
         sc.close();
 
-        int[] data = {dia, mes};
+        String[] dataStrArray = dataStr.split("/");
+        int[] data = {Integer.valueOf(dataStrArray[0]), Integer.valueOf(dataStrArray[1])};
         System.out.println("\ndias: " + contaDias(data));
-        
     }
 
     public static int contaDiasMeses(int[] data) {
-        int mesesAContar = data[1] - 1;
         int diasMeses = 0;
 
-        if (mesesAContar == 0) {
-            return 0;
-        } 
-
-        for (int i = 0; i < mesesAContar; i++) {
+        for (int i = 0; i < data[1] - 1; i++) {
             diasMeses += meses[i];
         }
 
