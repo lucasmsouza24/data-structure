@@ -1,9 +1,9 @@
-package sptech.com.br.exercicios.ex06.ex06q02;
+package sptech.com.br.exercicios.ex06;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Ex01Q02 {
+public class Questao02 {
     
     public static void main(String[] args) {
         

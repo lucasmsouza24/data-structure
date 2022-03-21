@@ -1,8 +1,8 @@
-package sptech.com.br.exercicios.ex06.ex06q01;
+package sptech.com.br.exercicios.ex06;
 
 import java.util.Scanner;
 
-public class Ex006Q01 {
+public class Questao00 {
     
     public static void main(String[] args) {
         String[] diasSemana = {"domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"};
