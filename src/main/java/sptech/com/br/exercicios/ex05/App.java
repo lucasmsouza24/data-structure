@@ -21,7 +21,7 @@ public class App {
         b1.empinar();
         
         
-        cmt.acelerarVeiculos();
-        cmt.exibirVeiculos();
+        // cmt.acelerarVeiculos();
+        // cmt.exibirVeiculos();
     }
 }

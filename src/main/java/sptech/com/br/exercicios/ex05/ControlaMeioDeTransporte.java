@@ -21,17 +21,17 @@ public class ControlaMeioDeTransporte {
         return total;
     }
 
-    public void exibirVeiculos() {
-        this.meiosDeTransporte.stream().forEach(v -> {
-            System.out.println(v);
-        });
-    }
+    // public void exibirVeiculos() {
+    //     this.meiosDeTransporte.stream().forEach(v -> {
+    //         System.out.println(v);
+    //     });
+    // }
 
     public void addVeiculo(MeioDeTransporte v) {
         this.meiosDeTransporte.add(v);
     }
 
-    public void acelerarVeiculos() {
-        this.meiosDeTransporte.stream().forEach(v -> v.acelerar());
-    }    
+    // public void acelerarVeiculos() {
+    //     this.meiosDeTransporte.stream().forEach(v -> v.acelerar());
+    // }    
 }
