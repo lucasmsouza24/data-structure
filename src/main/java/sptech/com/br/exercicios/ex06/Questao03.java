@@ -7,7 +7,7 @@ public class Questao03 {
     public static void main(String[] args) {
         
         Scanner sc1 = new Scanner(System.in);
-        String[] names = new String[3];
+        String[] names = new String[10];
 
         for (int i = 0; i < names.length; i++) {
             System.out.println("Digite o " + (i + 1) + "º nome: ");
