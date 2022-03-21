@@ -42,7 +42,7 @@ public class Questao02 {
     }
 
     public static double avg(int[] integers) {
-        return sum(integers) / integers.length;
+        return sum(integers) / (double) integers.length;
     }
 
     public static int sum(int[] integers) {
