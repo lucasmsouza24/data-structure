@@ -62,7 +62,9 @@ public class ExercicioTurma {
         for (int i = 0; i < array.length; i++) {
             if (Objects.nonNull(array[i])) {
                 length++;
+                continue;
             }
+            break;
         }
 
         return length;
