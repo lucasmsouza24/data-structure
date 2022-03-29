@@ -4,22 +4,23 @@ public class App {
     
     public static void main(String[] args) {
 
-        ListaEstatica le = new ListaEstatica(6);
+        // ListaEstatica le = new ListaEstatica(6);
+        ListaEstatica leo = new ListaEstaticaOrdenada(4);
 
-        le.append(0);
-        le.append(1);
-        le.append(1);
-        le.append(2);
-        le.append(3);
-        le.append(5);
+        leo.append(4);
+        leo.append(3);
+        leo.append(1);
+        leo.append(2);
 
-        System.out.println(le.getByValue(2));
+        leo.displayValues();
 
-        le.displayValues();
+        // le.append(0);
+        // le.append(1);
+        // le.append(2);
+        // le.append(3);
 
-        le.removeByIndex(1);
-        le.removeByValue(2);
+        // le.addOnStart(-1);
 
-        le.displayValues();
+        // le.displayValues();
     }
 }
