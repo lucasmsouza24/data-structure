@@ -5,12 +5,13 @@ public class App {
     public static void main(String[] args) {
 
         // ListaEstatica le = new ListaEstatica(6);
-        ListaEstatica leo = new ListaEstaticaOrdenada(4);
+        ListaEstatica leo = new ListaEstaticaOrdenada(5);
 
-        leo.append(4);
+        leo.append(20);
+        leo.append(5);
+        leo.append(10);
+        leo.append(25);
         leo.append(2);
-        leo.append(3);
-        leo.append(1);
 
         leo.displayValues();
 
