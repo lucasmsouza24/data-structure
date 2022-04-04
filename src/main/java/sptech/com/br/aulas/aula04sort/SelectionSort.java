@@ -6,11 +6,11 @@ public class SelectionSort {
         int[] unsorted = {4, 7, 5, 2, 8, 1, 6, 3};
         int[] unsorted2 = {4, 7, 5, 2, 8, 1, 6, 3};
 
-        // sortSelection(unsorted);
+        sortSelection(unsorted);
         sortSelectionOpt(unsorted2);
 
-        // displayArray(unsorted);
-        // displayArray(unsorted2);
+        displayArray(unsorted);
+        displayArray(unsorted2);
     }
 
     public static void sortSelection(int[] unsorted) {
@@ -55,8 +55,8 @@ public class SelectionSort {
             unsorted[menorIndex] = aux;
         }
 
-        // System.out.println("trocas: " + changes);
-        // System.out.println("comparações: " + comparations);
+        System.out.println("trocas: " + changes);
+        System.out.println("comparações: " + comparations);
     }
 
     public static void displayArray(int[] array) {
