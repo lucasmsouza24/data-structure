@@ -84,6 +84,12 @@ public class ListaEstatica {
         return false;
     }
 
+    protected void putValueInIndex(int value, int index) {
+        if (toRightFromIndex(index)) {
+            this.vetor[index] = value;
+        }
+    }
+
     public boolean addOnStart(int value) {
         if (this.nroElem < this.vetor.length - 1 && this.validIndex(0)) {
             this.toRightFromIndex(0);
@@ -108,7 +114,7 @@ public class ListaEstatica {
 
     // retorna true se index for válido
     protected boolean validIndex(int index) {
-        if (index >= this.nroElem || index < 0) {
+        if (index > this.nroElem || index < 0) {
             return false;
         }
         return true;

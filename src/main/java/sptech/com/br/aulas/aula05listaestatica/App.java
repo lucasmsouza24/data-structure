@@ -8,9 +8,9 @@ public class App {
         ListaEstatica leo = new ListaEstaticaOrdenada(4);
 
         leo.append(4);
+        leo.append(2);
         leo.append(3);
         leo.append(1);
-        leo.append(2);
 
         leo.displayValues();
 
