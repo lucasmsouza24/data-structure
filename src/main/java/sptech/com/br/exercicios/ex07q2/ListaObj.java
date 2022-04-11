@@ -1,4 +1,4 @@
-package sptech.com.br.exercicios.ex07;
+package sptech.com.br.exercicios.ex07q2;
 
 public class ListaObj <T> {
     protected T[] vetor;
@@ -21,7 +21,7 @@ public class ListaObj <T> {
     // exibe todos os itens da lista
     public void displayValues() {
         for (int i = 0; i < this.nroElem; i++) {
-            System.out.print(this.vetor[i] + ", ");
+            System.out.println(this.vetor[i]);
         }
         System.out.println();
     };
@@ -127,6 +127,10 @@ public class ListaObj <T> {
 
     public void clean() {
         this.nroElem = 0;
+    }
+
+    public void clear() {
+        this.clean();
     }
 
     // retorna true se index for válido

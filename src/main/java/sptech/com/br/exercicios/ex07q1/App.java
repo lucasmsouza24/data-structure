@@ -1,4 +1,6 @@
-package sptech.com.br.exercicios.ex07;
+package sptech.com.br.exercicios.ex07q1;
+
+import sptech.com.br.exercicios.ex07q2.ListaObj;
 
 public class App {
     public static void main(String[] args) {

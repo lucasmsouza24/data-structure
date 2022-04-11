@@ -1,4 +1,4 @@
-package sptech.com.br.exercicios.ex07;
+package sptech.com.br.exercicios.ex07q1;
 
 public class Produto {
     // attributes
