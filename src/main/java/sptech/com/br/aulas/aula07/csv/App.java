@@ -1,19 +1,23 @@
 package sptech.com.br.aulas.aula07.csv;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Formatter;
 import java.util.FormatterClosedException;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
         ListaObj<Cachorro> cachorros = new ListaObj<Cachorro>(7);
 
-        Cachorro c1 = new Cachorro("nome1", "porte1", 1);
-        Cachorro c2 = new Cachorro("nome2", "porte2", 2);
-        Cachorro c3 = new Cachorro("nome3", "porte3", 3);
-        Cachorro c4 = new Cachorro("nome4", "porte4", 4);
-        Cachorro c5 = new Cachorro("nome5", "porte5", 5);
+        Cachorro c1 = new Cachorro(1, "nome1", "porte1", 12);
+        Cachorro c2 = new Cachorro(2, "nome2", "porte2", 23);
+        Cachorro c3 = new Cachorro(3, "nome3", "porte3", 31);
+        Cachorro c4 = new Cachorro(4, "nome4", "porte4", 42);
+        Cachorro c5 = new Cachorro(5, "nome5", "porte5", 53);
 
         cachorros.append(c1);
         cachorros.append(c2);
@@ -21,7 +25,8 @@ public class App {
         cachorros.append(c4);
         cachorros.append(c5);
 
-        gravaArquivoCsv(cachorros, "cachorros");
+        // gravaArquivoCsv(cachorros, "cachorros");
+        leArquivoCsv("cachorros");
     }
 
     public static void gravaArquivoCsv(ListaObj<Cachorro> lista, String nomeArquivo) {
@@ -48,6 +53,39 @@ public class App {
             deuRuim = true;
         } finally {
             saida.close();
+        }
+    }
+
+    public static void leArquivoCsv(String nomeArq) {
+        FileReader arq = null;
+        Scanner entrada = null;
+        boolean deuRuim = false;
+        nomeArq += ".csv";
+
+        // abrindo arquivo
+        try{
+            arq = new FileReader(nomeArq);
+            entrada = new Scanner(arq).useDelimiter(";|\\n");
+        } catch (FileNotFoundException e) {
+            System.out.println("Arquivo não encontrado!");
+            System.exit(1);
+        }
+
+        try {
+            System.out.printf("%4s %-15s %-9s %5s\n", "ID", "NOME", "PORTE", "PESO");
+            while(entrada.hasNext()) {
+                int id = entrada.nextInt();
+                String nome = entrada.next();
+                String porte = entrada.next();
+                Double peso = entrada.nextDouble();
+
+                Cachorro c = new Cachorro(id, nome, porte, peso);
+                System.out.println(c);
+            }
+        } catch (NoSuchElementException e) {
+            System.out.println(e);
+        } finally {
+            entrada.close();
         }
     }
 }

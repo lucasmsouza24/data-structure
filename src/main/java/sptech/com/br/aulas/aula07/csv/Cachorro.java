@@ -2,12 +2,12 @@ package sptech.com.br.aulas.aula07.csv;
 
 public class Cachorro {
     private int id;
-    
     private String nome;
     private String porte;
     private double peso;
 
-    public Cachorro(String nome, String porte, double peso) {
+    public Cachorro(int id, String nome, String porte, double peso) {
+        this.id = id;
         this.nome = nome;
         this.porte = porte;
         this.peso = peso;
@@ -40,6 +40,6 @@ public class Cachorro {
 
     @Override
     public String toString() {
-        return "Cachorro [nome=" + nome + ", peso=" + peso + ", porte=" + porte + "]";
+        return String.format("%4d %-15s %-9s %5.2f", this.getId(), this.getNome(), this.getPorte(), this.getPeso());
     }
 }
