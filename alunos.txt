@@ -1,0 +1,7 @@
+
+00NOTA2022125-04-2022 20:04:5201
+02	1    Enzo                CCO       Estrutura de Dados   10,00    0
+02	2    Peter               CCO       Desenvolvimento Web   8,00    1
+02	3    Jordan              ADS       Estrutura de Dados    7,00    2
+02	4    Renato              CCO       Design e Interacao    7,00    1
+02	5    Enzo2               ADS       Estrutura de Dados    9,00    0
