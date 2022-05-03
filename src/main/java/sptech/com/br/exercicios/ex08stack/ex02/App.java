@@ -10,6 +10,7 @@ public class App {
         int[] conj3 = new int[] {10, 20, 30, 30, 20, 10};
         int[] conj4 = new int[] {1, 2, 3, 2, 1};
 
+        // display values
         System.out.println(isPalindrome(conj1));
         System.out.println(isPalindrome(conj2));
         System.out.println(isPalindrome(conj3));
@@ -20,12 +21,25 @@ public class App {
     public static boolean isPalindrome(int[] vector) {
         MyStack<Integer> myStack = toStack(vector);
         
-        for (int i = 0; i < Math.floor(vector.length / 2) ; i++) {
+        for (int i = 0; i < Math.floor(vector.length / 2); i++) {
             if (vector[i] != myStack.pop()) {
                 return false;
             }
         }
         
+        return true;
+    }
+
+    // return true if Vector @param vector is an palimdrome
+    public static boolean isPalindrome(String[] vector) {
+        MyStack<String> myStack = toStack(vector);
+
+        for (int i = 0; i < Math.floor(vector.length / 2); i++) {
+            if (vector[i] != myStack.pop()) {
+                return false;
+            }
+        }
+
         return true;
     }
     
@@ -34,6 +48,17 @@ public class App {
         MyStack<Integer> myStack = new MyStack<Integer>();
 
         for (int value : vector) {
+            myStack.push(value);
+        }
+
+        return myStack;
+    }
+
+    // returns convert String vector to String Stack
+    public static MyStack<String> toStack(String[] vector) {
+        MyStack<String> myStack = new MyStack<String>();
+
+        for (String value : vector) {
             myStack.push(value);
         }
 
