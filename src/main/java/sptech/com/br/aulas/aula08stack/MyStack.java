@@ -8,8 +8,8 @@ public class MyStack<T>{
 
     // constructor
     public MyStack(int length) {
-        items = (T[]) new Object[length];
-        top = -1;
+        this.items = (T[]) new Object[length];
+        this.top = -1;
     }
     public MyStack() {
         this(10);
@@ -62,6 +62,31 @@ public class MyStack<T>{
         }
 
         return accumulator;
+    }
+
+    // returns true if vector is an palindrome
+    public boolean isPalindrome() {
+        
+        MyStack<T> myStack = toStack(items);
+        
+        for (int i = 0; i < Math.floor(top / 2); i++) {
+            if (items[i].equals(myStack.pop())) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+
+    // returns convert int vector to Integer Stack
+    public MyStack<T> toStack(T[] vector) {
+        MyStack<T> myStack = new MyStack<T>(vector.length);
+
+        for (int i = 0; i < top; i++) {
+            myStack.push(vector[i]);
+        }
+
+        return myStack;
     }
 
     // boolean methods
