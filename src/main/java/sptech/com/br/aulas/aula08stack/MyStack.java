@@ -42,6 +42,15 @@ public class MyStack<T>{
         }
     }
 
+    // public MyStack<T> multiPop(int n) {
+        
+    //     if (n > top) {
+    //         return null;
+    //     }
+
+    //     MyStack<T> aux = new MyStack<>(length)
+    // }
+
     public String toString() {
 
         String accumulator = "";
