@@ -1,4 +1,4 @@
-package sptech.com.br.exercicios.ex08stack.ex01;
+package sptech.com.br.aulas.aula08stack;
 
 public class MyStack<T>{
     
@@ -40,6 +40,28 @@ public class MyStack<T>{
         } else {
             throw new RuntimeException("Pilha vazia");
         }
+    }
+
+    public String toString() {
+
+        String accumulator = "";
+
+        for (int i = 0; i <= top; i++) {
+            accumulator += items[i].toString();
+        }
+
+        return accumulator;
+    }
+
+    public String toReverseString() {
+
+        String accumulator = "";
+
+        for (int i = top; i >= 0; i--) {
+            accumulator += items[i].toString();
+        }
+
+        return accumulator;
     }
 
     // boolean methods
