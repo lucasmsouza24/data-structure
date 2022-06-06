@@ -21,6 +21,8 @@ public class Ex01 {
 
         // lendo valores
         showMatriz(matriz);
+
+        sc.close();
     }
 
     public static void showMatriz(int[][] matriz) {
