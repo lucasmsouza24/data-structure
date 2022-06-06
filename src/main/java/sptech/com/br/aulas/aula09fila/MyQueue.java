@@ -1,7 +1,5 @@
 package sptech.com.br.aulas.aula09fila;
 
-import java.util.ArrayList;
-
 public class MyQueue<T> {
     
     // attributes
@@ -39,7 +37,7 @@ public class MyQueue<T> {
     // returns first item value (and remove value from queue)
     public T poll() {
 
-        if (this.length > 0) {
+        if (isNotEmpty()) {
             T aux = this.items[0];
             moveAllToLeft();
             return aux;
